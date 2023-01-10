@@ -1,5 +1,42 @@
 // MERAKI TIENDA ONLINE
 
+// CLASS CLIENTE
+class Cliente {
+    constructor (nombre, apellido, email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
+}
+
+// ARRAY VACIO CLIENTES
+let arrayClientes = [];
+ // localStorage
+const clientesJSON = JSON.stringify(arrayClientes);
+localStorage.setItem("arrayClientes", clientesJSON);
+const clientesRecuperados = localStorage.getItem("arrayClientes");
+const clientesObjeto = JSON.parse(clientesRecuperados);
+
+
+// VINCULAMOS CON HTML
+const formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", (e) => {   
+e.preventDefault();
+    const nombre = document.getElementById("nombre");
+    const apellido = document.getElementById("apellido");
+    const email = document.getElementById("email");
+
+// CREAMOS EL CLIENTE
+    const cliente = new Cliente(nombre.value, apellido.value, email.value);
+// LO AGREGAMOS AL ARRAY
+    arrayClientes.push(cliente);
+//VERIFICAMOS POR CONSOLA
+    console.log (arrayClientes);
+// RESETEAMOS EL FORMULARIO
+    formulario.reset();
+})
+
+
 // CLASS PRODUCTOS
 class Producto {
     constructor (id, nombre, precio, img){
