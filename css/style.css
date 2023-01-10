@@ -20,6 +20,24 @@
     padding: 2%;
 }
 
+.formulario-display{
+padding: 2%;
+}
+
+.formulario-estilos{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus{
+    outline: none;
+    border: solid 4px #cbe3ef;
+    border-radius: 5px;
+}
+
 .titulo-pagina{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -114,18 +132,13 @@
     padding-left: 10%;
 }
 
-img:hover{
-    transform: scale(1.2);
-    transition: all 1s linear;
-}
-
 .whatsapp img{
     width: 5%;
     position: fixed;
     bottom: 1%;
     right: 1%;
 }
-      img:hover {
+ .whatsapp img:hover {
         transform: scale(1.2);
         transition: all 1s linear;
     }

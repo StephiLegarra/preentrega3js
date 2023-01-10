@@ -34,7 +34,7 @@
     <!--- header-->
     <nav class="navbar color-fondo">
         <div class="container-fluid d-lg-flex justify-content-lg-around">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand bienvenidos" href="#">
                 <img src="img/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
                 MERAKI - TIENDA ONLINE
             </a>
@@ -51,6 +51,36 @@
             Utilizo materiales de calidad, y me gusta inspirarme e innovar distintos diseños. Si lo desean, pueden
             diseñar uno propio y ¡me pongo manos a la obra!</p>
     </article>
+    <hr>
+    <section>
+        <h2 class="titulo-pagina"> Registrate</h2>
+       
+          <form action="/server/" method="post" enctype="application/x-www-form-urlencoded" id="formulario" class="formulario-display">
+            <div class="formulario-estilos">
+            <label for="nombre" name="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+            <br> <br>
+        
+            <label for="apellido" name="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Escribe tu apellido" required> 
+            <br> <br>
+
+            <label for="email"  name="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@gmail.com" required>
+            <br> <br>
+
+            <label for="numeroTelefono" name="numeroTelefono">Numero de teléfono</label>
+            <input type="number" name="numeroTelefono" id="numeroTelefono" placeholder="11111111" required>
+            <br> <br>
+        </div>
+         <div class="boton-display">
+            <button type="submit" class="btn colorBoton">Enviar</button>
+            <button type="reset" class="btn colorBoton">Borrar</button>
+        </div>
+        </form>
+
+
+    </section>
     <hr>
     <h2 class="titulo-pagina"> Carrito de compras:</h2>
     <div id="contenedorProductos" class="row"></div>
